@@ -1,3 +1,10 @@
 # Arquivo: Makefile
-auto_telas.py : Telas.ui
-	pyuic5 Telas.ui -o auto_telas.py
+
+#Traduzindo arquivos .ui gerados pela ferramenta de designer do pyqt para .py 
+telas:
+	pyuic5 telaLivro.ui -o telaLivro.py
+	pyuic5 telaUsuario.ui -o telaUsuario.py
+
+#Limpa os arquivos traduzidos
+clean:
+	@rm -f tela*.py
