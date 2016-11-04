@@ -1,4 +1,7 @@
 import time
+import sys
+
+telaLivro = uic.loadUiType("telaLivro.ui")[0]  
 
 class Livro():
     def __init__(self):
