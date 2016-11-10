@@ -92,4 +92,6 @@ ENV/
 .ide
 
 # PyQT translate files
-tela*.py
+
+# Zip
+*.zip

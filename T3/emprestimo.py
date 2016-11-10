@@ -1,13 +1,6 @@
-import time
-import sys
-
-telaLivro = uic.loadUiType("telaLivro.ui")[0]  
-
 class Livro():
-    def __init__(self):
-        self.nome = ""
-        self.editora = ""
-        self.numPaginas = 0
+    def __init__(self,nome):
+        self.nome = nome
         self.emprestado = False
 
     def insert(self, livro, livros):
@@ -18,7 +11,7 @@ class Livro():
 
 class Usuario():
     def __init__(self):
-        self.nome = ""
+        self.nome = telaUsuario.retornaNome()
 
     def insert(self, usuario, usuarios):
         usuarios.append(usuario)
@@ -62,6 +55,24 @@ class Biblioteca():
 
     def removeUsuario(self, usuario):
         usuario.remove(usuario, self.usuarios)
+
+    def localizarLivro(self, nome):
+        for x in self.livros:
+            if(x.nome == nome):
+                return x
+        return None
+
+    def localizarUsuario(self, nome):
+        for x in self.usuarios:
+            if(x.nome == nome):
+                return x
+        return None
+
+    def localizarEmprestimo(self, livro, usuario):
+        for x in self.emprestimos:
+            if(x.livro == livro && x.usuario == usuario):
+                return x
+        return None
 
     def emprestar(self, livro, usuario):
         self.emprestimo = Emprestimo(livro, usuario)
