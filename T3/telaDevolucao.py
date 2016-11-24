@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'telaDevolucao.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.7
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -35,7 +34,7 @@ class Ui_Dialog(object):
         self.comboBox.setObjectName("comboBox")
 
         self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(main.fazerDevolucao())
+        self.buttonBox.accepted.connect(Dialog.accept)
         self.buttonBox.rejected.connect(Dialog.reject)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 

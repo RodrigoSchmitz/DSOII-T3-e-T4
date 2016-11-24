@@ -89,7 +89,7 @@ ENV/
 .ropeproject
 
 # Pycharm stuff:
-.ide
+.idea
 
 # PyQT translate files
 

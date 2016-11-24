@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'telaLivro.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.7
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
 
 class Ui_TelaLivro(object):
     def setupUi(self, TelaLivro):
@@ -17,6 +16,7 @@ class Ui_TelaLivro(object):
         self.buttonBox.setGeometry(QtCore.QRect(10, 440, 621, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setCenterButtons(True)
         self.buttonBox.setObjectName("buttonBox")
         self.inputNome = QtWidgets.QLineEdit(TelaLivro)
         self.inputNome.setGeometry(QtCore.QRect(240, 180, 231, 41))
@@ -38,7 +38,7 @@ class Ui_TelaLivro(object):
         self.labelNome.setObjectName("labelNome")
 
         self.retranslateUi(TelaLivro)
-        self.buttonBox.accepted.connect(main.adicionarLivro())
+        self.buttonBox.accepted.connect(TelaLivro.accept)
         self.buttonBox.rejected.connect(TelaLivro.reject)
         self.inputNome.textChanged['QString'].connect(self.inputNome.setText)
         QtCore.QMetaObject.connectSlotsByName(TelaLivro)
@@ -49,5 +49,3 @@ class Ui_TelaLivro(object):
         self.labelTitulo.setText(_translate("TelaLivro", "TelaLivro"))
         self.labelNome.setText(_translate("TelaLivro", "Nome Livro: "))
 
-    def retornaLabelNome():
-        self.inputNome.getText()

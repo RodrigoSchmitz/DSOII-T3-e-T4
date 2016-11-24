@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'telaUsuario.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.7
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
 
 class Ui_TelaUsuario(object):
     def setupUi(self, TelaUsuario):
@@ -36,7 +35,7 @@ class Ui_TelaUsuario(object):
         self.labelNome.setObjectName("labelNome")
 
         self.retranslateUi(TelaUsuario)
-        self.buttonBox.accepted.connect(main.adicionarUsuario)
+        self.buttonBox.accepted.connect(TelaUsuario.accept)
         self.buttonBox.rejected.connect(TelaUsuario.reject)
         self.inputNome.textEdited['QString'].connect(self.inputNome.setText)
         QtCore.QMetaObject.connectSlotsByName(TelaUsuario)
@@ -47,5 +46,3 @@ class Ui_TelaUsuario(object):
         self.tituloTelaUsuario.setText(_translate("TelaUsuario", "Tela Usuario"))
         self.labelNome.setText(_translate("TelaUsuario", "Nome:"))
 
-    def retonarNome():
-        return self.inputNome.getText()

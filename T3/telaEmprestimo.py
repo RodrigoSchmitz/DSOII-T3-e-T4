@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'telaEmprestimo.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.7
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
 
 class Ui_TelaEmprestimo(object):
     def setupUi(self, TelaEmprestimo):
@@ -41,7 +40,7 @@ class Ui_TelaEmprestimo(object):
         self.dataEmprestimo.setObjectName("dataEmprestimo")
 
         self.retranslateUi(TelaEmprestimo)
-        self.buttonBox.accepted.connect(main.fazerEmprestimo())
+        self.buttonBox.accepted.connect(TelaEmprestimo.accept)
         self.buttonBox.rejected.connect(TelaEmprestimo.reject)
         QtCore.QMetaObject.connectSlotsByName(TelaEmprestimo)
 
