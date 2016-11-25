@@ -21,7 +21,7 @@ class Ui_TelaUsuario(object):
         self.tituloTelaUsuario.setGeometry(QtCore.QRect(270, 20, 81, 16))
         self.tituloTelaUsuario.setObjectName("tituloTelaUsuario")
         self.inputNome = QtWidgets.QLineEdit(TelaUsuario)
-        self.inputNome.setGeometry(QtCore.QRect(170, 170, 171, 41))
+        self.inputNome.setGeometry(QtCore.QRect(170, 170, 401, 41))
         font = QtGui.QFont()
         font.setFamily("Sawasdee")
         font.setPointSize(18)
@@ -33,6 +33,9 @@ class Ui_TelaUsuario(object):
         font.setPointSize(18)
         self.labelNome.setFont(font)
         self.labelNome.setObjectName("labelNome")
+        self.addUser = QtWidgets.QPushButton(TelaUsuario)
+        self.addUser.setGeometry(QtCore.QRect(300, 250, 101, 31))
+        self.addUser.setObjectName("addUser")
 
         self.retranslateUi(TelaUsuario)
         self.buttonBox.accepted.connect(TelaUsuario.accept)
@@ -45,4 +48,5 @@ class Ui_TelaUsuario(object):
         TelaUsuario.setWindowTitle(_translate("TelaUsuario", "Dialog"))
         self.tituloTelaUsuario.setText(_translate("TelaUsuario", "Tela Usuario"))
         self.labelNome.setText(_translate("TelaUsuario", "Nome:"))
+        self.addUser.setText(_translate("TelaUsuario", "Adicionar"))
 

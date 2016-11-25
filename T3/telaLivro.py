@@ -12,12 +12,6 @@ class Ui_TelaLivro(object):
     def setupUi(self, TelaLivro):
         TelaLivro.setObjectName("TelaLivro")
         TelaLivro.resize(640, 480)
-        self.buttonBox = QtWidgets.QDialogButtonBox(TelaLivro)
-        self.buttonBox.setGeometry(QtCore.QRect(10, 440, 621, 32))
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setCenterButtons(True)
-        self.buttonBox.setObjectName("buttonBox")
         self.inputNome = QtWidgets.QLineEdit(TelaLivro)
         self.inputNome.setGeometry(QtCore.QRect(240, 180, 231, 41))
         font = QtGui.QFont()
@@ -36,10 +30,11 @@ class Ui_TelaLivro(object):
         font.setPointSize(18)
         self.labelNome.setFont(font)
         self.labelNome.setObjectName("labelNome")
+        self.addLivro = QtWidgets.QPushButton(TelaLivro)
+        self.addLivro.setGeometry(QtCore.QRect(290, 260, 111, 31))
+        self.addLivro.setObjectName("addLivro")
 
         self.retranslateUi(TelaLivro)
-        self.buttonBox.accepted.connect(TelaLivro.accept)
-        self.buttonBox.rejected.connect(TelaLivro.reject)
         self.inputNome.textChanged['QString'].connect(self.inputNome.setText)
         QtCore.QMetaObject.connectSlotsByName(TelaLivro)
 
@@ -48,4 +43,5 @@ class Ui_TelaLivro(object):
         TelaLivro.setWindowTitle(_translate("TelaLivro", "Dialog"))
         self.labelTitulo.setText(_translate("TelaLivro", "TelaLivro"))
         self.labelNome.setText(_translate("TelaLivro", "Nome Livro: "))
+        self.addLivro.setText(_translate("TelaLivro", "Adicionar"))
 
